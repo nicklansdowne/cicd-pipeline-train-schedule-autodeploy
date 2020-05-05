@@ -31,6 +31,8 @@ spec:
         app: train-schedule
         track: stable
     spec:
+      imagePullSecrets:
+      - name: dockerlogin
       containers:
       - name: train-schedule
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
